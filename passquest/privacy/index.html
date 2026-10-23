@@ -89,9 +89,9 @@
 
 <h1>PassQuest — Politique de confidentialité <span lang="en">/ Privacy Policy</span></h1>
 <p class="meta">Date d'entrée en vigueur : <strong>4 octobre 2026</strong> ·
-Dernière mise à jour : <strong>18 octobre 2026</strong><br>
+Dernière mise à jour : <strong>23 octobre 2026</strong><br>
 <span lang="en">Effective date: <strong>4 October 2026</strong> ·
-Last updated: <strong>18 October 2026</strong></span></p>
+Last updated: <strong>23 October 2026</strong></span></p>
 
 <p class="lang-switch"><strong>Français</strong> : <a href="#fr">lire ci-dessous</a> ·
 <span lang="en"><strong>English</strong>: <a href="#en">read below</a></span></p>
@@ -104,7 +104,7 @@ Last updated: <strong>18 October 2026</strong></span></p>
     <li><a href="#fr-rien">3. Ce que PassQuest ne fait pas</a></li>
     <li><a href="#fr-appareil">4. Ce qui reste sur ton appareil</a></li>
     <li><a href="#fr-pub">5. Publicité et consentement (Google AdMob)</a></li>
-    <li><a href="#fr-pistage">6. Pas de pistage : ni IDFA, ni fenêtre de suivi</a></li>
+    <li><a href="#fr-pistage">6. Le suivi publicitaire : seulement si tu l'autorises</a></li>
     <li><a href="#fr-achat">7. Achat intégré (Apple / StoreKit)</a></li>
     <li><a href="#fr-notifs">8. Notifications et rappels</a></li>
     <li><a href="#fr-partage">9. Classement, codes de défi et partage</a></li>
@@ -127,7 +127,7 @@ Last updated: <strong>18 October 2026</strong></span></p>
     <li><a href="#en-not">3. What PassQuest does not do</a></li>
     <li><a href="#en-device">4. What stays on your device</a></li>
     <li><a href="#en-ads">5. Advertising and consent (Google AdMob)</a></li>
-    <li><a href="#en-tracking">6. No tracking: no IDFA, no tracking prompt</a></li>
+    <li><a href="#en-tracking">6. Ad tracking: only if you allow it</a></li>
     <li><a href="#en-purchase">7. In-app purchase (Apple / StoreKit)</a></li>
     <li><a href="#en-notifs">8. Notifications and reminders</a></li>
     <li><a href="#en-sharing">9. Leaderboard, challenge codes and sharing</a></li>
@@ -162,8 +162,9 @@ reçoit alors des données techniques (adresse IP, informations sur l'appareil,
 interactions avec les annonces). Si tu achètes la dispense de publicité, cela
 s'arrête aussi.</p>
 
-<p>Je ne vends aucune donnée. Je n'utilise aucun outil de statistiques, aucun
-service de rapport de plantage, aucun pisteur publicitaire inter-applications.</p>
+<p>Je ne vends aucune donnée. Je n'utilise aucun outil de statistiques ni aucun
+service de rapport de plantage. Le suivi publicitaire par Google n'a lieu que si
+tu l'autorises dans la fenêtre d'Apple (section 6).</p>
 
 <h2 id="fr-responsable">2. Qui est responsable</h2>
 
@@ -240,10 +241,10 @@ Limited pour l'Europe, Google LLC ailleurs), au moyen du logiciel
 le logiciel de Google traite notamment&nbsp;:</p>
 
 <ul>
-  <li>un <strong>identifiant d'appareil</strong> à usage publicitaire. Il ne
-  s'agit <em>pas</em> de l'IDFA d'Apple, que PassQuest ne demande jamais (voir la
-  section suivante)&nbsp;: faute d'IDFA, Google s'appuie sur des identifiants qui
-  ne sortent pas de son propre réseau et ne permettent pas de te suivre d'une
+  <li>un <strong>identifiant d'appareil</strong> à usage publicitaire. Si tu
+  autorises le suivi (voir la section suivante), c'est l'IDFA d'Apple&nbsp;; si tu
+  le refuses, Google n'a pas d'IDFA et s'appuie sur des identifiants qui ne
+  sortent pas de son propre réseau et ne permettent pas de te suivre d'une
   entreprise à l'autre&nbsp;;</li>
   <li>ton <strong>adresse IP</strong>, qui permet à Google de déduire un pays et
   une région approximative&nbsp;;</li>
@@ -309,20 +310,29 @@ Je ne peux pas, et ne cherche pas, à relier une annonce à une personne.</p>
   lorsque tu utilises les sites ou applications de ses partenaires</a></li>
 </ul>
 
-<h2 id="fr-pistage">6. Pas de pistage : ni IDFA, ni fenêtre de suivi</h2>
+<h2 id="fr-pistage">6. Le suivi publicitaire : seulement si tu l'autorises</h2>
 
 <p>Sur iOS, une application qui veut suivre un utilisateur d'une app à l'autre
 doit afficher la fenêtre «&nbsp;Autoriser le suivi&nbsp;» (<em>App Tracking
 Transparency</em>) et obtenir l'identifiant publicitaire d'Apple, l'IDFA.</p>
 
-<p><strong>PassQuest ne le fait pas.</strong> L'application n'appelle jamais
-<code>ATTrackingManager</code> et la clé
-<code>NSUserTrackingUsageDescription</code> est volontairement absente de sa
-configuration. Conséquence&nbsp;: iOS ne lui accorde aucun IDFA, aucun
-identifiant partagé entre applications n'est disponible, et dans la déclaration
-de confidentialité de l'App Store toutes les réponses «&nbsp;utilisé pour vous
-suivre&nbsp;» sont <strong>non</strong>. C'est pour cela que tu ne verras jamais
-cette fenêtre dans PassQuest.</p>
+<p><strong>PassQuest te pose la question.</strong> À la première ouverture,
+après le formulaire de Google s'il s'affiche, iOS présente la fenêtre
+«&nbsp;Autoriser le suivi&nbsp;». Aucune annonce n'est demandée avant ta
+réponse.</p>
+
+<ul>
+  <li>si tu <strong>autorises</strong>, le logiciel de Google peut utiliser
+  l'IDFA pour personnaliser les annonces et les relier à ton activité dans
+  d'autres applications et sites de son réseau&nbsp;;</li>
+  <li>si tu <strong>refuses</strong>, iOS ne donne aucun IDFA&nbsp;: les annonces
+  restent non personnalisées, et le jeu fonctionne exactement pareil.</li>
+</ul>
+
+<p>Tu peux changer d'avis à tout moment dans <em>Réglages → Confidentialité et
+sécurité → Suivi</em>. La déclaration de confidentialité de l'App Store indique
+en conséquence que l'identifiant de l'appareil et les données publicitaires
+peuvent être «&nbsp;utilisés pour vous suivre&nbsp;».</p>
 
 <p>L'application déclare par ailleurs une liste d'identifiants
 <strong>SKAdNetwork</strong>. Il s'agit du mécanisme d'Apple qui permet de savoir
@@ -584,9 +594,8 @@ points qui te concernent, dits simplement&nbsp;:</p>
   changer ta réponse.</li>
   <li><strong>Dans les réglages d'iOS</strong>&nbsp;:
     <ul>
-      <li><em>Réglages → Confidentialité et sécurité → Suivi</em> — garde le
-      suivi désactivé. (PassQuest ne demande de toute façon jamais cette
-      autorisation.)</li>
+      <li><em>Réglages → Confidentialité et sécurité → Suivi</em> — désactive
+      le suivi pour PassQuest (ou pour toutes les applications).</li>
       <li><em>Réglages → Confidentialité et sécurité → Publicité Apple</em> —
       désactive les annonces personnalisées d'Apple.</li>
       <li>Réinitialiser l'identifiant publicitaire de l'appareil coupe le lien
@@ -681,8 +690,9 @@ supplied by <strong>Google AdMob</strong>, and Google's software then receives
 technical data (IP address, device information, ad interactions). If you buy the
 ad-free purchase, that stops too.</p>
 
-<p>I do not sell any data. I use no analytics tool, no crash reporting service,
-and no cross-app advertising tracker.</p>
+<p>I do not sell any data. I use no analytics tool and no crash reporting service.
+Ad tracking by Google only happens if you allow it in Apple's prompt
+(section 6).</p>
 
 <h2 id="en-controller">2. Who is responsible</h2>
 
@@ -759,10 +769,10 @@ elsewhere) through the <em>Google Mobile Ads SDK</em> embedded in the app.</p>
 software processes, among other things:</p>
 
 <ul>
-  <li>a <strong>device advertising identifier</strong>. This is <em>not</em>
-  Apple's IDFA, which PassQuest never requests (see the next section): with no
-  IDFA available, Google relies on identifiers that stay within its own network
-  and cannot be used to follow you from one company to another;</li>
+  <li>a <strong>device advertising identifier</strong>. If you allow tracking
+  (see the next section), this is Apple's IDFA; if you refuse, Google gets no
+  IDFA and relies on identifiers that stay within its own network and cannot be
+  used to follow you from one company to another;</li>
   <li>your <strong>IP address</strong>, from which Google infers a country and an
   approximate region;</li>
   <li><strong>technical device information</strong>: model, OS version, language,
@@ -822,19 +832,27 @@ revenue). I cannot, and do not try to, connect an ad to a person.</p>
   from sites or apps that use its services</a></li>
 </ul>
 
-<h2 id="en-tracking">6. No tracking: no IDFA, no tracking prompt</h2>
+<h2 id="en-tracking">6. Ad tracking: only if you allow it</h2>
 
 <p>On iOS, an app that wants to track a user across other companies' apps must
 show the "Allow tracking" prompt (<em>App Tracking Transparency</em>) and obtain
 Apple's advertising identifier, the IDFA.</p>
 
-<p><strong>PassQuest does not do this.</strong> The app never calls
-<code>ATTrackingManager</code> and the
-<code>NSUserTrackingUsageDescription</code> key is deliberately absent from its
-configuration. As a result iOS grants it no IDFA, no cross-app identifier is
-available to anyone, and in the App Store privacy disclosure every "used to track
-you" answer is <strong>no</strong>. That is why you will never see that prompt in
-PassQuest.</p>
+<p><strong>PassQuest asks you.</strong> At first launch, after Google's form if
+it appears, iOS shows the "Allow tracking" prompt. No ad is requested before you
+answer.</p>
+
+<ul>
+  <li>if you <strong>allow</strong> it, Google's software may use the IDFA to
+  personalise ads and link them to your activity in other apps and sites of its
+  network;</li>
+  <li>if you <strong>refuse</strong>, iOS provides no IDFA: ads stay
+  non-personalised, and the game works exactly the same.</li>
+</ul>
+
+<p>You can change your mind at any time in <em>Settings → Privacy &amp; Security
+→ Tracking</em>. The App Store privacy disclosure accordingly states that the
+device identifier and advertising data may be "used to track you".</p>
 
 <p>The app does declare a list of <strong>SKAdNetwork</strong> identifiers. This
 is Apple's mechanism for learning that an ad led to an install <em>without</em>
@@ -1071,8 +1089,8 @@ another state with comparable law, here is what concerns you, plainly:</p>
   Google's form reopens and you can change your answer.</li>
   <li><strong>In iOS Settings</strong>:
     <ul>
-      <li><em>Settings → Privacy &amp; Security → Tracking</em> — keep tracking
-      off. (PassQuest never asks for this permission anyway.)</li>
+      <li><em>Settings → Privacy &amp; Security → Tracking</em> — turn tracking
+      off for PassQuest (or for all apps).</li>
       <li><em>Settings → Privacy &amp; Security → Apple Advertising</em> — turn
       off Apple's personalised ads.</li>
       <li>Resetting the device advertising identifier severs the link with the
@@ -1151,7 +1169,7 @@ Montréal, Québec H2Y 1W8, Canada<br>
   <p>PassQuest — Souleymane Marena, Montréal (Québec), Canada ·
   <a href="/">jules217.github.io</a></p>
   <p lang="en">Published in French and English. Effective 4 October 2026 ·
-  last updated 18 October 2026.</p>
+  last updated 23 October 2026.</p>
 </footer>
 
 </main>
